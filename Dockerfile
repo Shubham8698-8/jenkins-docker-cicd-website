@@ -1,4 +1,8 @@
-# use nginx web server
-FROM nginx:letest
-COPY index.html /usr/shear/nginx/html/index.html
+# Use nginx web server
+FROM nginx:latest
+
+# Copy website files to nginx default folder
+COPY index.html /usr/share/nginx/html/index.html
+
+# Expose port 80
 EXPOSE 80
