@@ -5,8 +5,8 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git branch: 'main',
-                    url: https://github.com/Shubham8698-8/jenkins-docker-cicd-website.git'
+                git url: 'https://github.com/Shubham8698-8/jenkins-docker-cicd-website.git',
+                    branch: 'main'
             }
         }
 
@@ -34,10 +34,10 @@ pipeline {
 
     post {
         success {
-            echo "✅ Website deployed successfully"
+            echo '✅ Website deployed successfully'
         }
         failure {
-            echo "❌ Deployment failed"
+            echo '❌ Deployment failed'
         }
     }
 }
