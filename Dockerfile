@@ -2,7 +2,12 @@
 FROM nginx:latest
 
 # Copy website files to nginx default folder
-COPY index.html /usr/share/nginx/html/index.html
+FROM nginx:latest
+
+COPY . /usr/share/nginx/html/
+
+EXPOSE 80
+
 
 # Expose port 80
 EXPOSE 80
